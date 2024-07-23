@@ -7,7 +7,7 @@ namespace ChatGPT
 {
     public static class ChatGPTApi
     {
-        private static string openAIUrl = "https://api.openai.com/v1/completions";
+        private static string openAIUrl = "https://api.openai.com/v1/chat/completions";
         private static string token = "TOKEN";
         public static Action<ChatGPTResponse> OnMessageReceived;
 

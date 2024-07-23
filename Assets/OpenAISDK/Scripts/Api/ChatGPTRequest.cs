@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ChatGPT
 {
@@ -6,8 +7,21 @@ namespace ChatGPT
     public class ChatGPTRequest
     {
         public string model;
-        public string prompt;
+        public List<ChatGPTMessage> messages;
         public int max_tokens;
-        public int temperature;
+        public float temperature;
+    }
+
+    [Serializable]
+    public class ChatGPTMessage 
+    {
+        public string role;
+        public string content;
+
+        public ChatGPTMessage(string role, string content)
+        {
+            this.role = role;
+            this.content = content;
+        }
     }
 }
